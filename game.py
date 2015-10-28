@@ -59,6 +59,7 @@ class HatelimitMain:
 		self.nope_sprites = pygame.sprite.Group()
 		self.clock = pygame.time.Clock()
 		self.airhorn_sound = load_sound('airhorn.wav')
+		self.derf_sound = load_sound('derf.wav')
 		self.font = pygame.font.Font(None, 36)
 		self.state = Gamestate()
 
@@ -134,6 +135,7 @@ class HatelimitMain:
 	def new_nope(self):
 		nope = Nope()
 		self.nope_sprites.add(pygame.sprite.RenderClear((nope)))
+		self.derf_sound.play()
 
 
 class Airhorn(pygame.sprite.Sprite):
